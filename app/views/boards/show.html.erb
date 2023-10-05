@@ -59,28 +59,25 @@
       <div class="col-md-12">
         <div class="table-responsive">
           <table class="table table-hover table-striped table-bordered">
-            <tbody><tr>
+            <tr>
               <th>Title</th>
               <th>Body</th>
               <th>Posted on</th>
               <th>Expired on</th>
             </tr>
 
+   <% @expired_posts.each do |a_post| %>
             <tr>
-            <% @expired_posts.each do |a_post| %>
            <td><%= a_post.title %></td>
            <td><%= a_post.body %></td>
            <td><%= a_post.created_at.strftime("%b %e, %Y") %></td>
            <td><%= a_post.expires_on.strftime("%b %e, %Y") %></td>
            </tr>
              <% end %> 
-
-          </tbody>
           </table>
         </div>
       </div>
     </div>
-  </div>
   </div>
 
 
@@ -134,4 +131,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>
